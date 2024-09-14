@@ -1582,6 +1582,12 @@ def create_instruments():
             unit="",
         ),
         Sensor(
+            attr="charging_state",
+            name="Charging State",
+            icon="mdi:ev-plug-type1",
+            unit="",
+        ),
+        Sensor(
             attr="climatisation_target_temperature",
             name="Climatisation target temperature",
             icon="mdi:thermometer",

@@ -1119,6 +1119,13 @@ class Vehicle:
         return cstate == "charging"
 
     @property
+    def charging_state(self) -> str:
+        """Return charging state."""
+        return find_path(
+            self.attrs, f"{Services.CHARGING}.chargingStatus.value.chargingState"
+        )
+
+    @property
     def charging_last_updated(self) -> datetime:
         """Return attribute last updated timestamp."""
         return find_path(
